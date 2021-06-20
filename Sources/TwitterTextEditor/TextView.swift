@@ -195,10 +195,10 @@ final class TextView: UITextView {
             return false
         }
         
-        if action != #selector(paste(_:)) {
+        if action != #selector(paste(_:)) && action != #selector(copy(_:)) {
             return false
         }
-        
+                
         /*
          UIKit behavior workaround
 
