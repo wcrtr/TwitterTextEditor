@@ -194,11 +194,11 @@ final class TextView: UITextView {
         {
             return false
         }
-
-        if super.canPerformAction(action, withSender: sender) {
-            return true
+        
+        if action != #selector(paste(_:)) {
+            return false
         }
-
+        
         /*
          UIKit behavior workaround
 
