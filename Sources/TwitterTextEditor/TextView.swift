@@ -198,6 +198,10 @@ final class TextView: UITextView {
         if action != #selector(paste(_:)) && action != #selector(copy(_:)) {
             return false
         }
+        
+        if action == #selector(paste(_:)) {
+            return false
+        }
                 
         /*
          UIKit behavior workaround
